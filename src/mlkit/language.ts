@@ -1,6 +1,6 @@
 import { Plugins } from '@capacitor/core';
 
-const { MLKit } = Plugins;
+const { MLKitLanguage } = Plugins;
 
 /**
  * A LanguageIdentification client for identifying the language of a piece of text.
@@ -40,7 +40,7 @@ export class LanguageIdentifier {
    * @returns {Promise<IdentifiedLanguage>} Object having languageCode of the identified language
    */
   public identifyLanguage(text: string): Promise<IdentifiedLanguage> {
-    return MLKit.NLLIdentifyLanguage({
+    return MLKitLanguage.NLLIdentifyLanguage({
       text,
       languageIdentifierOptions: this.languageIdentifierOptions,
     });
@@ -55,7 +55,7 @@ export class LanguageIdentifier {
   public identifyPossibleLanguages(
     text: string,
   ): Promise<IdentifiedLanguagesResponse> {
-    return MLKit.NLLIdentifyPossibleLanguages({
+    return MLKitLanguage.NLLIdentifyPossibleLanguages({
       text,
       languageIdentifierOptions: this.languageIdentifierOptions,
     });
