@@ -14,22 +14,61 @@ class PluginTests: XCTestCase {
         super.tearDown()
     }
 
-    func testEcho() {
-        // This is an example of a functional test case for a plugin.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-
+    func identifyLanguage() {
         let value = "Hello, World!"
-        let plugin = MyPlugin()
+        let language = "en"
+        let plugin = MLKitLanguage()
 
         let call = CAPPluginCall(callbackId: "test", options: [
             "value": value
         ], success: { (result, _) in
-            let resultValue = result!.data["value"] as? String
-            XCTAssertEqual(value, resultValue)
+            let resultValue = result!.data["languageCode"] as? String
+            XCTAssertEqual(language, resultValue)
         }, error: { (_) in
             XCTFail("Error shouldn't have been called")
         })
 
-        plugin.echo(call!)
+        plugin.NLLIdentifyLanguage(call!)
+    }
+
+    func identifyLanguageWithInvalidData() {
+        let plugin = MLKitLanguage()
+
+        let call = CAPPluginCall(callbackId: "test", options: nil, success: { (_, _) in
+            XCTFail("Error shouldn't have been called")
+        }, error: { (err) in
+            XCTAssertNotNil(err)
+        })
+
+        plugin.NLLIdentifyLanguage(call!)
+    }
+
+    func identifyPossibleLanguages() {
+        let value = "Hello, World!"
+        let plugin = MLKitLanguage()
+
+        let call = CAPPluginCall(callbackId: "test", options: [
+            "value": value
+        ], success: { (result, _) in
+            let resultValue = result!.data["possibleLanguages"] as? [Any]
+            XCTAssertNotNil(resultValue)
+            XCTAssertTrue(resultValue!.count > 0)
+        }, error: { (_) in
+            XCTFail("Error shouldn't have been called")
+        })
+
+        plugin.NLLIdentifyPossibleLanguages(call!)
+    }
+
+    func identifyPossibleLanguagesWithInvalidData() {
+        let plugin = MLKitLanguage()
+
+        let call = CAPPluginCall(callbackId: "test", options: nil, success: { (_, _) in
+            XCTFail("Error shouldn't have been called")
+        }, error: { (err) in
+            XCTAssertNotNil(err)
+        })
+
+        plugin.NLLIdentifyPossibleLanguages(call!)
     }
 }
