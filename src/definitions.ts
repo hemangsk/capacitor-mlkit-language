@@ -6,11 +6,11 @@ import {
 
 declare global {
   interface PluginRegistry {
-    MLKit: MLKitPlugin;
+    MLKitLanguage: MLKitLanguagePlugin;
   }
 }
 
-export interface MLKitPlugin {
+export interface MLKitLanguagePlugin {
   /**
    * Identify the language of the provided text.
    *
