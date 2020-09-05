@@ -1,4 +1,4 @@
-package dev.hemang.capmlkitlanguage;
+package dev.hemang.mlkit_language;
 
 import com.getcapacitor.JSObject;
 import com.getcapacitor.NativePlugin;
