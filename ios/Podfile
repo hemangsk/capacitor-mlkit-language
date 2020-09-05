@@ -8,9 +8,11 @@ def capacitor_pods
 end
 
 target 'Plugin' do
+  pod 'GoogleMLKit/LanguageID'
   capacitor_pods
 end
 
 target 'PluginTests' do
+  pod 'GoogleMLKit/LanguageID'
   capacitor_pods
 end

@@ -2,10 +2,82 @@ PODS:
   - Capacitor (2.4.0):
     - CapacitorCordova
   - CapacitorCordova (2.4.0)
+  - GoogleDataTransport (7.3.0):
+    - nanopb (~> 1.30906.0)
+  - GoogleMLKit/LanguageID (0.63.0):
+    - GoogleMLKit/MLKitCore
+    - MLKitLanguageID (~> 0.63.0)
+  - GoogleMLKit/MLKitCore (0.63.0):
+    - MLKitCommon (~> 0.63.0)
+  - GoogleToolboxForMac/DebugUtils (2.2.2):
+    - GoogleToolboxForMac/Defines (= 2.2.2)
+  - GoogleToolboxForMac/Defines (2.2.2)
+  - GoogleToolboxForMac/Logger (2.2.2):
+    - GoogleToolboxForMac/Defines (= 2.2.2)
+  - "GoogleToolboxForMac/NSData+zlib (2.2.2)":
+    - GoogleToolboxForMac/Defines (= 2.2.2)
+  - "GoogleToolboxForMac/NSDictionary+URLArguments (2.2.2)":
+    - GoogleToolboxForMac/DebugUtils (= 2.2.2)
+    - GoogleToolboxForMac/Defines (= 2.2.2)
+    - "GoogleToolboxForMac/NSString+URLArguments (= 2.2.2)"
+  - "GoogleToolboxForMac/NSString+URLArguments (2.2.2)"
+  - GoogleToolboxForMac/StringEncoding (2.2.2):
+    - GoogleToolboxForMac/Defines (= 2.2.2)
+  - GoogleUtilities/Environment (6.7.2):
+    - PromisesObjC (~> 1.2)
+  - GoogleUtilities/Logger (6.7.2):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/UserDefaults (6.7.2):
+    - GoogleUtilities/Logger
+  - GoogleUtilitiesComponents (1.0.0):
+    - GoogleUtilities/Logger
+  - GTMSessionFetcher/Core (1.4.0)
+  - MLKitCommon (0.63.0):
+    - GoogleDataTransport (~> 7.0)
+    - GoogleToolboxForMac/Logger (~> 2.1)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+    - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
+    - GoogleUtilities/UserDefaults (~> 6.0)
+    - GoogleUtilitiesComponents (~> 1.0)
+    - GTMSessionFetcher/Core (~> 1.1)
+    - Protobuf (~> 3.12)
+  - MLKitLanguageID (0.63.0):
+    - MLKitNaturalLanguage (~> 0.63)
+  - MLKitNaturalLanguage (0.63.0):
+    - GoogleToolboxForMac/Logger (~> 2.1)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+    - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
+    - GoogleToolboxForMac/StringEncoding (~> 2.1)
+    - GTMSessionFetcher/Core (~> 1.1)
+    - MLKitCommon (~> 0.63.0)
+    - Protobuf (~> 3.12)
+  - nanopb (1.30906.0):
+    - nanopb/decode (= 1.30906.0)
+    - nanopb/encode (= 1.30906.0)
+  - nanopb/decode (1.30906.0)
+  - nanopb/encode (1.30906.0)
+  - PromisesObjC (1.2.10)
+  - Protobuf (3.13.0)
 
 DEPENDENCIES:
   - "Capacitor (from `../node_modules/@capacitor/ios`)"
   - "CapacitorCordova (from `../node_modules/@capacitor/ios`)"
+  - GoogleMLKit/LanguageID
+
+SPEC REPOS:
+  trunk:
+    - GoogleDataTransport
+    - GoogleMLKit
+    - GoogleToolboxForMac
+    - GoogleUtilities
+    - GoogleUtilitiesComponents
+    - GTMSessionFetcher
+    - MLKitCommon
+    - MLKitLanguageID
+    - MLKitNaturalLanguage
+    - nanopb
+    - PromisesObjC
+    - Protobuf
 
 EXTERNAL SOURCES:
   Capacitor:
@@ -16,7 +88,19 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Capacitor: 0bc38985fc7744924a8e1d72a53b11e93f53adb5
   CapacitorCordova: ffb86bd6630220cf94a63306a72f13c653fb43aa
+  GoogleDataTransport: e85fb700c9b027079ce182c3d08e12e0f9618bb4
+  GoogleMLKit: 99fc8402693f034ecea567485af4de2bbb3ca108
+  GoogleToolboxForMac: 800648f8b3127618c1b59c7f97684427630c5ea3
+  GoogleUtilities: 7f2f5a07f888cdb145101d6042bc4422f57e70b3
+  GoogleUtilitiesComponents: a69c0b3b369ba443e988141e75ef49d9010b1c80
+  GTMSessionFetcher: 6f5c8abbab8a9bce4bb3f057e317728ec6182b10
+  MLKitCommon: fc574613b15b3c61056f1f2c2277397bf8e1eeda
+  MLKitLanguageID: 05ac7cde407e74bb9ef9e003a0a8654dbfc3f21c
+  MLKitNaturalLanguage: 3eacd963fca74a20096cdefcda970e623ddbf987
+  nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
+  PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
+  Protobuf: 3dac39b34a08151c6d949560efe3f86134a3f748
 
-PODFILE CHECKSUM: e66d6fa04b0daaf06d8498d39637adf77139c716
+PODFILE CHECKSUM: e5a65fe110df724432170b72a767291ca6d06fd3
 
 COCOAPODS: 1.9.3
