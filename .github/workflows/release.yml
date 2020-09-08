@@ -23,7 +23,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           registry-url: 'https://npm.pkg.github.com'
-          scope: '@hemang'
+          scope: '@hemangsk'
       # Publish to GitHub Packages
       - run: npm publish
         env:
