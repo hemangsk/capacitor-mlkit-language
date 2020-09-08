@@ -1,6 +1,6 @@
 {
   "name": "@hemangsk/capacitor-mlkit-language",
-  "version": "0.0.4",
+  "version": "0.0.1",
   "description": "Plugin implementing Language Identification on Android & iOS using Google's on-device ML library - ML Kit",
   "main": "dist/plugin.js",
   "module": "dist/esm/index.js",
