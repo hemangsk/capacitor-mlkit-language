@@ -16,6 +16,7 @@ jobs:
           scope: '@hemangsk'
       - run: npm install
       # Publish to GitHub Packages
+      - run: echo "registry=https://npm.pkg.github.com/@hemangsk" >> .npmrc
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
